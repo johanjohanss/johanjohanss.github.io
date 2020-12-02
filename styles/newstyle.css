@@ -1,0 +1,591 @@
+@font-face {
+  font-family: "vietnam";
+  src: url(../fonts/BeVietnam-Regular.ttf);
+}
+
+@font-face {
+  font-family: "vietnamLight";
+  src: url(../fonts/BeVietnam-Light.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #f7f7f8;
+}
+
+.bottom-text {
+  font-size: 0.85rem;
+  color: #cecece;
+}
+
+.animation-wrapper {
+  min-height: 100vh;
+}
+
+header p {
+  font-size: 1.3rem;
+  font-family: "vietnamLight";
+}
+
+.linktext {
+  font-size: 1.3rem;
+  font-family: "vietnamLight";
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+main {
+  margin-top: 8rem;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+.project {
+  height: 20rem;
+}
+
+.project-content {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-box-shadow: inset 5px 5px 300px rgba(0, 0, 0, 0), 4px 4px 5px rgba(0, 0, 0, 0.123);
+          box-shadow: inset 5px 5px 300px rgba(0, 0, 0, 0), 4px 4px 5px rgba(0, 0, 0, 0.123);
+  -webkit-transition: -webkit-box-shadow 0.25s ease-in-out;
+  transition: -webkit-box-shadow 0.25s ease-in-out;
+  transition: box-shadow 0.25s ease-in-out;
+  transition: box-shadow 0.25s ease-in-out, -webkit-box-shadow 0.25s ease-in-out;
+}
+
+.project-content p {
+  margin-top: 0.2rem;
+}
+
+.project:nth-child(1) .project-content {
+  background-image: url(../img/thera-bg.jpg);
+}
+
+.project:nth-child(2) .project-content {
+  background-image: url(../img/bubbles-bg.svg);
+}
+
+.project:nth-child(3) .project-content {
+  background-image: url(../img/waveform-bg.jpg);
+}
+
+.project:nth-child(4) .project-content {
+  background-image: url(../img/tattoo-bg.jpg);
+}
+
+.project:nth-child(5) .project-content {
+  background-image: url(../img/tetris-bg.svg);
+}
+
+.project:nth-child(6) .project-content {
+  background-image: url(../img/barba-bg.svg);
+}
+
+.img-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.project-content:hover {
+  -webkit-box-shadow: inset 5px 5px 300px rgba(0, 0, 0, 0.247), 4px 4px 5px rgba(0, 0, 0, 0.123);
+          box-shadow: inset 5px 5px 300px rgba(0, 0, 0, 0.247), 4px 4px 5px rgba(0, 0, 0, 0.123);
+  -webkit-transition: -webkit-box-shadow 0.25s ease-in-out;
+  transition: -webkit-box-shadow 0.25s ease-in-out;
+  transition: box-shadow 0.25s ease-in-out;
+  transition: box-shadow 0.25s ease-in-out, -webkit-box-shadow 0.25s ease-in-out;
+}
+
+.project-text {
+  font-size: 1.85rem;
+  text-shadow: 1px 2px 6px rgba(0, 0, 0, 0.274);
+  font-family: "vietnam";
+  margin: 0rem;
+  padding: 0rem;
+  line-height: 2.2rem;
+}
+
+.thin-bb {
+  border-bottom: 2px solid rgba(30, 79, 139, 0.897);
+}
+
+.inv-bb {
+  border-bottom: 2px solid rgba(255, 255, 255, 0);
+}
+
+#logo {
+  width: 15%;
+}
+
+#cookie {
+  opacity: 0;
+  background-color: #de6c83;
+  color: white;
+  padding: 0.6rem;
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  border-radius: 0.15rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-animation: fadeUp 1.25s ease forwards;
+          animation: fadeUp 1.25s ease forwards;
+  -webkit-animation-delay: 1.25s;
+          animation-delay: 1.25s;
+}
+
+#cookie svg {
+  padding-left: 0.3rem;
+}
+
+#accept-cookies:hover {
+  cursor: pointer;
+}
+
+@-webkit-keyframes fadeUp {
+  0% {
+    opacity: 0;
+    bottom: -1rem;
+  }
+  100% {
+    opacity: 1;
+    bottom: 1rem;
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    bottom: -1rem;
+  }
+  100% {
+    opacity: 1;
+    bottom: 1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  #headertext {
+    display: none !important;
+  }
+  nav {
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+  }
+  #headerlogo {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+footer {
+  background-color: #1d1d1d;
+  height: 4.5rem;
+  width: 100%;
+}
+
+.page-transition {
+  background-color: #fff568;
+  position: fixed;
+  z-index: 10;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  pointer-events: none;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page-transition-about {
+  background-color: white;
+  position: fixed;
+  z-index: 10;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  pointer-events: none;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page-transition-about-2 {
+  background-color: #f7f7f8;
+  position: fixed;
+  z-index: 10;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  pointer-events: none;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.once-transition {
+  background-color: #fffff8;
+  position: fixed;
+  z-index: 10;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  pointer-events: none;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about-title {
+  color: rgba(30, 79, 139, 0.897);
+}
+
+.text-large {
+  font-size: 1.5rem;
+}
+
+.undertitle {
+  font-size: 1.25rem;
+}
+
+.description {
+  font-size: 1.15rem;
+}
+
+#back {
+  background-color: whitesmoke;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#2e2e2d), to(#505050));
+  background-image: linear-gradient(to top, #2e2e2d, #505050);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 5;
+  min-height: 100vh;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+#back:hover {
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transform: scaleX(1.2);
+          transform: scaleX(1.2);
+}
+
+#backarrow {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 8;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  text-shadow: 4px 4px 4px black;
+}
+
+#backarrow:hover {
+  -webkit-transition: -webkit-transform 0.5;
+  transition: -webkit-transform 0.5;
+  transition: transform 0.5;
+  transition: transform 0.5, -webkit-transform 0.5;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.thera-body {
+  background-color: white;
+}
+
+.about-body {
+  background-color: white;
+}
+
+.yellowlink {
+  color: #fff568;
+}
+
+.yellowlink:hover {
+  color: #eeff00;
+}
+
+.blackbox {
+  background-color: #1d1d1d;
+  padding: 0.75rem;
+}
+
+.linkbox a {
+  width: 33%;
+}
+
+.circle-move {
+  position: absolute;
+  z-index: 1;
+  opacity: 0.5;
+}
+
+.bubble-container {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.debris {
+  width: 2px;
+  height: 2px;
+  background-color: #de6c83;
+  position: absolute;
+}
+
+#gamefield {
+  background-color: #fffadf;
+  padding: 2rem;
+  border-radius: 0.25rem;
+  width: 60%;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.103);
+          box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.103);
+}
+
+#start-button {
+  padding: 0.25rem;
+  background-color: #242424;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
+  width: 160px;
+  height: 50px;
+  outline: none;
+  font-size: 1rem;
+}
+
+#score {
+  color: #242424;
+}
+
+.tetris-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 4rem;
+}
+
+.mini-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /*border: 1px solid black;*/
+}
+
+.grid {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  border: 1px solid #242424;
+  width: 300px;
+  height: 600px;
+  background-color: #242424;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.grid div {
+  height: 30px;
+  width: 30px;
+}
+
+.mini-grid {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  border: 2px solid #242424;
+  width: 80px;
+  height: 80px;
+  margin-left: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: #242424;
+}
+
+.mini-grid div {
+  height: 20px;
+  width: 20px;
+}
+
+.tetromino {
+  background-color: #fff568;
+}
+
+#highscore > p {
+  color: #242424;
+  font-size: 1.5rem;
+}
+
+#tetris-wrapper {
+  background-color: #f7f7f8;
+  background-image: url(../img/tetris-page-bg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.three-wrapper {
+  background-color: #f7f7f8;
+  background-image: url(../three/svg/symbol-bg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.codetext {
+  width: 90%;
+  background-color: #242424;
+  color: white;
+  padding: 0.35rem;
+}
+
+.hide {
+  display: none !important;
+}
+/*# sourceMappingURL=newstyle.css.map */

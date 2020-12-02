@@ -1,0 +1,46 @@
+@font-face {
+  font-family: "vietnam";
+  src: url(../fonts/BeVietnam-Regular.ttf);
+}
+
+@font-face {
+  font-family: "vietnamLight";
+  src: url(../fonts/BeVietnam-Light.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "vietnam";
+}
+
+body {
+  background-color: #242424;
+}
+
+#back {
+  width: 110px;
+  height: 100vh;
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  background-color: #525252;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 5;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+/*# sourceMappingURL=project-style.css.map */

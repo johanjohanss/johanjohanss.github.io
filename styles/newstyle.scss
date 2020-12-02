@@ -1,0 +1,491 @@
+$blackColor: #242424;
+$yellowColor: rgb(255, 245, 104);
+@font-face {
+  font-family: "vietnam";
+  src: url(../fonts/BeVietnam-Regular.ttf);
+}
+@font-face {
+  font-family: "vietnamLight";
+  src: url(../fonts/BeVietnam-Light.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  //background-color: #f5f4f1;
+  background-color: #f7f7f8;
+  //overflow-x: hidden;
+}
+
+.bottom-text{
+  font-size: 0.85rem;
+  color: rgb(206, 206, 206);
+}
+
+.animation-wrapper {
+  min-height: 100vh;
+}
+
+header {
+  p {
+    font-size: 1.3rem;
+    font-family: "vietnamLight";
+    //color: $blackColor;
+    //border: 1px solid black;
+  }
+}
+.linktext {
+  font-size: 1.3rem;
+  font-family: "vietnamLight";
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+main {
+  margin-top: 8rem;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+//Project divs
+.project {
+  height: 20rem;
+  //border: 1px solid green;
+}
+.project-content {
+  width: 100%;
+  height: 100%;
+  //border: 1px solid black;
+  //background-image: url(svg/blob-bg.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: inset 5px 5px 300px rgba(0, 0, 0, 0),
+    4px 4px 5px rgba(0, 0, 0, 0.123);
+  transition: box-shadow 0.25s ease-in-out;
+  //border: 2px solid rgb(255, 255, 255);
+  p {
+    margin-top: 0.2rem;
+  }
+}
+//SETTING BG IMAGES
+.project:nth-child(1) .project-content {
+  background-image: url(../img/thera-bg.jpg);
+}
+.project:nth-child(2) .project-content {
+  background-image: url(../img/bubbles-bg.svg);
+}
+.project:nth-child(3) .project-content {
+  background-image: url(../img/waveform-bg.jpg);
+}
+.project:nth-child(4) .project-content {
+  background-image: url(../img/tattoo-bg.jpg);
+}
+.project:nth-child(5) .project-content {
+  background-image: url(../img/tetris-bg.svg);
+}
+.project:nth-child(6) .project-content {
+  background-image: url(../img/barba-bg.svg);
+}
+
+.img-cover {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.project-content:hover {
+  box-shadow: inset 5px 5px 300px rgba(0, 0, 0, 0.247),
+    4px 4px 5px rgba(0, 0, 0, 0.123);
+  transition: box-shadow 0.25s ease-in-out;
+}
+.project-text {
+  font-size: 1.85rem;
+  text-shadow: 1px 2px 6px rgba(0, 0, 0, 0.274);
+  font-family: "vietnam";
+  margin: 0rem;
+  padding: 0rem;
+  line-height: 2.2rem;
+}
+
+.thin-bb {
+  border-bottom: 2px solid rgba(30, 79, 139, 0.897);
+}
+.inv-bb {
+  border-bottom: 2px solid rgba(255, 255, 255, 0);
+}
+
+#headerlogo {
+}
+#logo {
+  width: 15%;
+  //border: 1px solid black;
+}
+
+//Cookies
+#cookie {
+  opacity: 0;
+  background-color: #de6c83;
+  color: white;
+  padding: 0.6rem;
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  border-radius: 0.15rem;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  animation: fadeUp 1.25s ease forwards;
+  animation-delay: 1.25s;
+
+  svg {
+    padding-left: 0.3rem;
+  }
+}
+#accept-cookies:hover {
+  cursor: pointer;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    bottom: -1rem;
+  }
+  100% {
+    opacity: 1;
+    bottom: 1rem;
+  }
+}
+
+//media queries
+@media (max-width: 767px) {
+  #headertext {
+    display: none !important;
+  }
+  nav {
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  #headerlogo {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+footer {
+  background-color: rgb(29, 29, 29);
+  height: 4.5rem;
+  width: 100%;
+
+  //position: fixed;
+  //bottom: 0;
+}
+
+//barba
+.page-transition {
+  background-color: rgb(255, 245, 104);
+  position: fixed;
+  z-index: 10;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  pointer-events: none;
+  transform: scaleX(0);
+  //transform: translateX(-100%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+$aboutColor: rgb(255, 255, 255);
+.page-transition-about {
+  background-color: $aboutColor;
+  position: fixed;
+  z-index: 10;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  pointer-events: none;
+  transform: scaleY(0);
+  //transform: translateX(-100%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page-transition-about-2 {
+  background-color: #f7f7f8; //rgb(31, 31, 31);
+  position: fixed;
+  z-index: 10;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  pointer-events: none;
+  transform: scaleY(0);
+  //transform: translateX(-100%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.once-transition {
+  background-color: rgb(255, 255, 248);
+  position: fixed;
+  z-index: 10;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  pointer-events: none;
+  //transform: scaleY(1);
+  transform: translateY(0);
+  //transform: skewY(0);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+//about me page
+.about-title{
+  color: rgba(30, 79, 139, 0.897);
+}
+
+.text-large {
+  font-size: 1.5rem;
+}
+
+//project pages style
+.undertitle {
+  font-size: 1.25rem;
+}
+.description {
+  font-size: 1.15rem;
+}
+
+#back {
+  //width: 100%;
+  //height: 2000px;
+  //position: fixed;
+  //top: 0rem;
+  //left: 0rem;
+  background-color: rgb(245, 245, 245);
+  background-image: linear-gradient(to top, rgb(46, 46, 45), rgb(80, 80, 80));
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+
+  min-height: 100vh;
+
+  transition: transform 0.5s;
+  transform: scaleX(1);
+}
+#back:hover {
+  transition: transform 0.5s;
+  transform: scaleX(1.2);
+}
+#backarrow {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 8;
+  transition: transform 0.5s;
+  transform: scale(1);
+  
+  text-shadow: 4px 4px 4px black;
+}
+#backarrow:hover {
+  transition: transform 0.5;
+  transform: scale(1.1);
+}
+
+//thera site style
+.thera-body {
+  background-color: white;
+}
+.about-body {
+  background-color: rgb(255, 255, 255);
+}
+
+//utility
+.yellowlink {
+  color: $yellowColor;
+}
+.yellowlink:hover {
+  color: rgb(238, 255, 0);
+}
+.blackbox {
+  background-color: rgb(29, 29, 29);
+  padding: 0.75rem;
+}
+.linkbox {
+  a {
+    width: 33%;
+  }
+}
+
+//Circle animation
+
+.circle-move {
+  position: absolute;
+  z-index: 1;
+  opacity: 0.5; //0.35;
+}
+.bubble-container {
+  height: 100vh;
+  overflow: hidden;
+}
+.debris {
+  width: 2px;
+  height: 2px;
+  background-color: #de6c83;
+  position: absolute;
+}
+
+//tetris styles
+#gamefield {
+  background-color: #fffadf;
+  padding: 2rem;
+  border-radius: 0.25rem;
+  width: 60%;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.103);
+}
+
+#start-button {
+  padding: 0.25rem;
+  background-color: $blackColor;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
+  width: 160px;
+  height: 50px;
+  outline: none;
+  font-size: 1rem;
+
+  &:hover {
+    //border: 1px solid black;
+  }
+}
+#score {
+  color: $blackColor;
+}
+
+.tetris-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 4rem;
+}
+
+.mini-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*border: 1px solid black;*/
+}
+
+.grid {
+  box-sizing: content-box;
+  border: 1px solid $blackColor;
+
+  width: 300px;
+  height: 600px;
+  background-color: $blackColor;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  div {
+    height: 30px;
+    width: 30px;
+  }
+}
+
+.mini-grid {
+  box-sizing: content-box;
+  border: 2px solid $blackColor;
+
+  width: 80px;
+  height: 80px;
+  margin-left: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: $blackColor;
+
+  div {
+    height: 20px;
+    width: 20px;
+  }
+}
+
+.tetromino {
+  background-color: $yellowColor;
+}
+#highscore > p {
+  color: $blackColor;
+  font-size: 1.5rem;
+}
+#tetris-wrapper {
+  background-color: #f7f7f8;
+  background-image: url(../img/tetris-page-bg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+//three js page
+.three-wrapper{
+    background-color: #f7f7f8;
+    background-image: url(../three/svg/symbol-bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+}
+
+//
+.codetext{
+  width: 90%;
+  background-color: rgb(36, 36, 36);
+  color: white;
+  padding: 0.35rem;
+}
+
+//hide utility
+.hide {
+  display: none !important;
+}

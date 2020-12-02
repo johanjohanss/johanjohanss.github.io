@@ -1,0 +1,373 @@
+$blackColor: rgb(22, 22, 22);
+$blueColor: #1fa0e2;
+$beigeColor: #f9d9d9;
+
+@font-face {
+  font-family: "vietnam";
+  src: url(fonts/BeVietnam-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "vietnam";
+}
+
+#circle-spin {
+  position: absolute;
+  left: 8%;
+  top: 18%;
+}
+
+header,
+main {
+  padding-left: 10rem;
+}
+body {
+  //background-color: $blackColor;
+
+  display: flex;
+  flex-direction: column;
+  //justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+  overflow: hidden;
+}
+header {
+  width: 85%;
+  //padding: 2.5rem;
+  //padding-left: 8rem;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
+
+  //background-color: white;
+  //border: 1px solid black;
+  padding-top: 3rem;
+  padding-bottom: 0rem;
+}
+#logo-section {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+nav {
+  width: 34.5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+  //border: 1px solid black;
+  height: 100%;
+
+  a {
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    color: $blueColor;
+    text-decoration: none;
+    font-size: 1.15rem;
+  }
+}
+
+#logo {
+  margin-right: 2.65rem;
+}
+main {
+  //background-color: white;
+  width: 85%;
+}
+.WEB {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  //border: 1px solid red;
+  padding-top: 4rem;
+}
+#web-article {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  //border: 1px solid yellow;
+}
+#web-text {
+  padding-left: 1.5rem;
+  padding-top: 0.3rem;
+}
+
+#linksection {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 1.55rem;
+  color: #de6c83;
+  //border: 1px solid black;
+  padding-right: 14.5rem;
+  padding-top: 4rem;
+
+  p {
+    padding: 0rem 1.5rem;
+  }
+  a {
+    text-decoration: none;
+    color: #de6c83;
+    z-index: 1000;
+  }
+}
+
+#cookie {
+  opacity: 0;
+  background-color: #de6c83;
+  color: white;
+  padding: 0.35rem 0.6rem;
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  border-radius: 0.15rem;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  animation: fadeUp 1.25s ease forwards;
+  animation-delay: 1.25s;
+
+  svg {
+    padding-left: 0.3rem;
+  }
+}
+#accept-cookies:hover {
+  cursor: pointer;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    bottom: -1rem;
+  }
+  100% {
+    opacity: 1;
+    bottom: 1rem;
+  }
+}
+
+#button-section {
+  width: 100%;
+  //border: 1px solid black;
+  //padding-left:  4rem;
+  margin-top: 3.55rem;
+  padding-right: 13rem;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#button1 {
+  text-decoration: none;
+
+  padding: 1rem 2rem;
+  border: 2px solid $blueColor;
+  background-color: white;
+
+  font-size: 1.75rem;
+  color: $blackColor;
+  margin: 1rem;
+
+  border-radius: 0.2rem;
+  z-index: 5;
+
+  /*background: -webkit-linear-gradient($blueColor, $beigeColor);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    //text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.068);*/
+}
+#button2 {
+  text-decoration: none;
+
+  padding: 1rem 2rem;
+  border: 2px solid $blackColor;
+  background-color: white;
+
+  font-size: 1.75rem;
+  color: $blackColor;
+  margin: 1rem;
+
+  border-radius: 0.2rem;
+  z-index: 5;
+}
+
+#bg-section {
+  width: 100%;
+  height: 500px;
+  background-image: url(svg/blob-bg-4.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: -4rem;
+}
+
+#skills {
+  p {
+    color: rgb(95, 95, 95);
+    font-size: 1.35rem;
+  }
+}
+
+//animation
+#logo-black {
+  animation: rotatelogo 1.5s ease;
+  transform-origin: 50% 50%; //100 100 looks nice
+  transform-box: fill-box;
+}
+@keyframes rotatelogo {
+  0% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.pad-y {
+  padding-top: 0.28rem;
+  padding-bottom: 0.28rem;
+}
+.w-50 {
+  width: 50%;
+}
+.w-40 {
+  width: 40%;
+}
+.mb-1 {
+  margin-bottom: 1rem;
+}
+.mb-05 {
+  margin-bottom: 0.5rem;
+}
+
+#card-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  //border: 1px solid black;
+  width: 100%;
+}
+.card {
+  border: 1px solid rgb(71, 71, 71);
+  width: 70px;
+  height: 340px;
+  background-color: rgb(143, 143, 143);
+}
+.active {
+  width: 250px;
+}
+
+//Circle animation
+
+.circle-move {
+  position: absolute;
+  z-index: 1;
+  opacity: 0.5; //0.35;
+}
+
+//ABOUT PAGE
+
+#aboutme {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 3rem;
+}
+#info {
+  margin-top: 6rem;
+  width: 70%;
+  //border: 1px solid yellow;
+}
+#skills {
+  margin-top: 4rem;
+  width: 70%;
+  //border: 1px solid yellow;
+}
+
+.debris {
+  width: 5px;
+  height: 5px;
+  background-color: $blueColor;
+  position: absolute;
+}
+
+//hide class
+.hide {
+  display: none !important;
+}
+
+#linkarticle {
+  //border: 1px solid red;
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 1100px) {
+  main {
+    padding-left: 0rem;
+  }
+
+  #bg-section {
+    background-image: none;
+  }
+  #linksection {
+    flex-direction: column;
+    align-items: flex-center;
+    padding-right: 0rem;
+    border: 1px solid yellow;
+
+    p {
+    }
+    a {
+    }
+  }
+  #logo {
+    width: 40%;
+  }
+  #logo-text {
+    width: 60%;
+  }
+
+  .WEB {
+    flex-direction: column;
+  }
+  #web-article {
+    width: 100%;
+    display: none;
+  }
+  #web-text {
+    width: 100% !important;
+    padding-top: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #linkarticle {
+    display: flex;
+    width: 100% !important;
+    justify-content: center;
+    align-items: center;
+  }
+}
