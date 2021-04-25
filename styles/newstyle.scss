@@ -1,5 +1,7 @@
 $blackColor: #242424;
 $yellowColor: rgb(255, 245, 104);
+$blue: #373C48;
+
 @font-face {
   font-family: "vietnam";
   src: url(../fonts/BeVietnam-Regular.ttf);
@@ -8,6 +10,18 @@ $yellowColor: rgb(255, 245, 104);
   font-family: "vietnamLight";
   src: url(../fonts/BeVietnam-Light.ttf);
 }
+@font-face {
+  font-family: "RNSNormal";
+  src: url(../fonts/RNSSanz-Normal.ttf);
+}
+@font-face {
+  font-family: "RNSBold";
+  src: url(../fonts/RNSSanz-Bold.ttf);
+}
+@font-face {
+  font-family: "RNSSemiBold";
+  src: url(../fonts/RNSSanz-SemiBold.ttf);
+}
 
 * {
   margin: 0;
@@ -15,10 +29,13 @@ $yellowColor: rgb(255, 245, 104);
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  //background-color: #f5f4f1;
   background-color: #f7f7f8;
-  //overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 .bottom-text{
@@ -30,14 +47,98 @@ body {
   min-height: 100vh;
 }
 
-header {
+#main_header {
+  background-color: $blue;
+  border-radius: 0% 0% 1rem 1rem;
+  height: 82vh;
+  width: 100%;
+
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  #h_div_1{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  #h_inner_div{
+    width: 90%;
+  }
+  #header_buttons{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 1.5rem;
+    a{
+      margin-right: 1rem;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      border: none;
+      color: rgb(255, 255, 255);
+      background-color: #EC5A80;
+
+
+      transform: scale(1);
+      transition: all 0.25s ease;
+
+      &:hover{
+        transform: scale(1.1);
+        transition: all 0.25s ease;
+        color: rgb(255, 255, 255);
+        background-color: #EC5A80;
+        cursor: pointer;
+      }
+    }
+
+  }
+
+  #jj-logo{
+    transform: scale(1) rotate(0deg);
+    transition: all 0.5s ease;
+    &:hover{
+      transform: scale(1.05) rotate(10deg);
+      transition: all 0.5s ease;
+    }
+  }
+
+  h1{
+    font-family: "RNSSemiBold";
+    font-size: 5rem;
+    color: white;
+    position: relative;
+    z-index: 2;
+  }
+  #h_underline{
+    position: relative;
+    top: -2rem;
+    left: -1rem;
+  }
   p {
     font-size: 1.3rem;
-    font-family: "vietnamLight";
-    //color: $blackColor;
-    //border: 1px solid black;
+    font-family: "RNSSemiBold";
+    color: white;
+    margin-top: 2rem;
   }
+  
 }
+
+#scroll_to_projects{
+  height: 18vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "RNSSemiBold";
+  color: $blue;
+  font-size: 1.2rem;
+}
+
 .linktext {
   font-size: 1.3rem;
   font-family: "vietnamLight";
@@ -80,22 +181,22 @@ a:hover {
 }
 //SETTING BG IMAGES
 .project:nth-child(1) .project-content {
-  background-image: url(../img/thera-bg.jpg);
-}
-.project:nth-child(2) .project-content {
-  background-image: url(../img/bubbles-bg.svg);
-}
-.project:nth-child(3) .project-content {
-  background-image: url(../img/waveform-bg.jpg);
-}
-.project:nth-child(4) .project-content {
-  background-image: url(../img/tattoo-bg.jpg);
-}
-.project:nth-child(5) .project-content {
   background-image: url(../img/tetris-bg.svg);
 }
+.project:nth-child(2) .project-content {
+  background-image: url(../svg/visualiser.svg);
+}
+.project:nth-child(3) .project-content {
+  background-image: url(../svg/designportfolio.svg);
+}
+.project:nth-child(4) .project-content {
+  //background-image: url(../img/tattoo-bg.jpg);
+}
+.project:nth-child(5) .project-content {
+  //background-image: url(../img/tetris-bg.svg);
+}
 .project:nth-child(6) .project-content {
-  background-image: url(../img/barba-bg.svg);
+  //background-image: url(../img/barba-bg.svg);
 }
 
 .img-cover {
@@ -128,8 +229,6 @@ a:hover {
   border-bottom: 2px solid rgba(255, 255, 255, 0);
 }
 
-#headerlogo {
-}
 #logo {
   width: 15%;
   //border: 1px solid black;
@@ -175,17 +274,8 @@ a:hover {
 
 //media queries
 @media (max-width: 767px) {
-  #headertext {
+  #headerlogo{
     display: none !important;
-  }
-  nav {
-    justify-content: center !important;
-    align-items: center !important;
-  }
-  #headerlogo {
-    display: flex !important;
-    justify-content: center;
-    align-items: center;
   }
 }
 
@@ -193,9 +283,6 @@ footer {
   background-color: rgb(29, 29, 29);
   height: 4.5rem;
   width: 100%;
-
-  //position: fixed;
-  //bottom: 0;
 }
 
 //barba

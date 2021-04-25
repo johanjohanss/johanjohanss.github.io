@@ -15,92 +15,75 @@
 <body data-barba="wrapper">
 
   <!-- Transition elements -->
-  <div class="page-transition"><img src="svg/logo-v3.svg" width="7%" /></div>
+  <div class="page-transition"><img src="svg/logo-v3.svg" width="20%" /></div>
   <div class="page-transition-about">
-    <img src="svg/logo-v3.svg" width="7%" />
+    <img src="svg/logo-v3.svg" width="20%" />
   </div>
   <div class="page-transition-about-2">
-    <img src="svg/logo-v3.svg" width="7%" />
+    <img src="svg/logo-v3.svg" width="20%" />
   </div>
 
   <!-- Transition element -->
-  <div class="once-transition"><img src="svg/logo-v3.svg" width="7%" /></div>
+  <div class="once-transition"><img src="svg/logo-v3.svg" width="20%" /></div>
 
   <div class="animation-wrapper" data-barba="container" data-barba-namespace="home">
 
-    <!--<header class="d-flex justify-content-center align-items-center p-0 pt-5">
 
-      <section class="row container-fluid px-5 d-flex justify-content-start align-items-end flex-row p-0">
+    <header id="main_header">
+        <div class="row">
+          <div id="h_div_1" class="col-md-6 col-sm-12">
+            <img src="svg/headertext.svg" width="90%" id="">
+            <div id="h_inner_div">
+              <p>web development, design and branding</p>
+            </div>
+            <div id="header_buttons">
+              <a href="https://www.instagram.com/webdesigncoder/" target="_blank">Instagram</a>
+              <a href="https://www.youtube.com/channel/UCWAbw_aDttx6h61En4QOL_Q" target="_blank">Youtube</a>
+              <a href="about.html">About Me</a>
+            </div>
+          </div>
+          <div class="pl-3 col-md-6 col-sm-12 d-flex align-items-center justify-content-center" id="headerlogo">
+            <img src="svg/logo.svg" width="70%" id="jj-logo">
+          </div>
+        </div>
+    </header>
 
-        <article class="col-12 pb-3 hide pr-3" id="headerlogo">
+    <section id="scroll_to_projects">
+      <div class="d-flex flex-column justify-content-center align-items-center">
+        <p>projects</p>
+        <a href="#project-section"><img src="svg/arrow.svg" width="100%"></a>
+      </div>
+    </section>
 
-          <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-          <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-          <svg id="logo" width="6%" viewBox="0 0 50 60" version="1.1" xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="
-                fill-rule: evenodd;
-                clip-rule: evenodd;
-                stroke-linecap: round;
-                stroke-miterlimit: 1.5;
-              ">
-            <g transform="matrix(1,0,0,1,-472.216,-84.8873)">
-              <g transform="matrix(1.05924,-0.38651,0.38651,1.05924,117.528,-372.98)">
-                <g transform="matrix(-0.670727,-0.826911,-0.686446,0.556792,481.968,343.123)">
-                  <path id="logo-black" d="M58.411,371.45L43.537,413.862L71.624,417.6L34.315,419.643L58.411,371.45Z"
-                    style="
-                        fill: none;
-                        stroke: black;
-                        stroke-opacity: 0.82;
-                        stroke-width: 0.91px;
-                      " />
-                </g>
-                <g transform="matrix(0.833144,0.304009,-0.304009,0.833144,156.31,489.298)">
-                  <use xlink:href="#_Image1" x="0.328" y="1.138" width="39.614px" height="58.005px"
-                    transform="matrix(0.990346,0,0,0.983136,0,0)" />
-                </g>
-                <g transform="matrix(-0.801776,-0.70058,-0.581574,0.66558,442.182,293.295)">
-                  <path d="M58.411,371.45L43.537,413.862L68.008,417.119L34.315,419.643L58.411,371.45Z"
-                    style="fill: none; stroke: white; stroke-width: 0.91px" />
-                </g>
-              </g>
-            </g>
-            <defs>
-              <image id="_Image1" width="40px" height="59px"
-                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAA7CAYAAAAJvMhYAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAEM0lEQVRogc2a8VLTQBCHv5KUYtFiARGdUd//eXwFBREFitQ2TZv4x+5ym5A2im2vN3MT0uHuvuztb2/vkoTtlj1gX2updWVJNk3kSgc4AE6BITAB5m2N0g1D+bKHAH5AAH8BGbBoa7TNYpBD4JXed9oabLMUeu0jgK0zuE3AkgB4AAzYQUC7vmAHAUEsWAI9AuBO+aBZMUWsuM8OAhZIaEkQsSSsgNw2IEhwzhDQQ1r8MAZgAUwRKx7SsprFmOI5VcCds+CCANinRcmxRDIDcqCLKHkpRywfnCOABS1KjmHBEpneGQK6UijbTLesWBzM9X7nAM2COTKtJpTGEkskBQKYI5lNdxlLDJH45S5Tht4yllgqNrHMCPGwUcmxLFgiMBktSo4VZiztyhA/XLrkxZxikCmeIbnhTlrQlrweS5a8mCruUFXyAQ3b0FiAKEhBEEpjwI7lg4WOXSKAM5YoOaYFDXBKsGBUQBOHqdgAvZKfJK8xVVwHtGO5nRCJrSQQdnklDUteTEADWank2CKBsA3NaRBKzDBj02ihpnFNjiUSG9tPcaOSPeDKQ5w1Fq9iu88VMKWWvBqtPY0/ZLTG64bzcdCMYmvygpDZLIAy1X/sI/OfEyK7peUech3A9TADVSVXlrwUCY5vgE/62xh4QE7hx67hgmou91xYD9ik5IpQUtegB7xDrDkD7oEbrfcKPCFsuP3e4l+B/TRbW8sNK6EmcfQjxGJ7wGuF/QCcAUdaB9pBTx/O/Mgqtb/rpYNsMU90jAsds9D+hjrOpTKVqQO8Riz1FTgHPgJvEac91Q4zZPqt/nbX3/yd//qkwYsz52nyukhdI/OzqYJeKNh7vabayRzx21PCzmyqdezqhKBM81+zYj3UwNMlLwHm9QzWjiWmBD+8UtOfA8fIFOUKMdVBXqiFTwiRYFIDNhH4QLwM8FHJy85EDNSOKMbAD4U4U+sNFPYX8E0772rnA4V9ow86JbjBAnnLlFCNheZqM1zS0HZ45E8AZjrAjQKcKcAZ8BK4Q4R2CXzRvg8JAjt3/fV5uij4g81HC/7r61iz6ERh7gj7iaGCdhErTRAX+Ql8R2ZgTBDLCLG8/y0hKPkKmDzn+M0UZ4fhI+3sBLHmW8RXRwo3Qiw/1vtUa6G/++BvyWsH8eu9/32hbce5U8QX73RQe+U6RKzbJUQKU729K/Hb0ATxzyPtZ7SuN+4mqkxBb5H4aMHX3g9bpmIx0sdJA+wjYlwAP9f9SYA5foZM6a0Cd3TQYwW1QFw/CukgMXao16tNfbPgXzeMET8c6W8Wggaon7k2JWL1Y0Rw3zb9UYUPU175cwWwNdlvliwXOGKDFmwqPkTdK2iGWNFADxE/fYU8wM220vx6sVxwX6GOkfB0RPXk//M2LVgvXvkPiEUfCEqeA9exLFgvlkN2CR9c7AO3fwCu26f+hsiF6QAAAABJRU5ErkJggg==" />
-            </defs>
-          </svg>
-        </article>
-        <article class="col-md-8 col-sm-12 d-flex flex-row" id="headertext">
-          <p class="m-0 p-0 text-dark">Johan Johansson - Projects</p>
-        </article>
-        <nav class="col-md-4 col-sm-12">
-          <a href="work.html" class="px-2 text-dark linktext thin-bb">Work</a>
-          <a href="about.html" class="px-2 text-dark linktext inv-bb">About</a>
-        </nav>
-      </section>
-    </header>-->
     <main>
 
       <!-- PROJECTS -->
-      <section class="container-fluid p-5">
+      <section class="container-fluid p-5" id="project-section">
         <article class="row">
+          
+
           <div class="col-sm-12 col-md-7 project p-3">
-            <a href="projects/thera-rent.html">
+            <a href="https://johanjohanss.github.io/tetris/" target="_blank">
               <div class="project-content p-3">
-                <h4 class="project-text text-white">Website</h4>
-                <p class="project-text text-white">for Thera-Rent</p>
+                <h4 class="project-text text-white">JavaScript Tetris</h4>
               </div>
             </a>
           </div>
           <div class="col-sm-12 col-md-5 project p-3">
-            <a href="projects/bubbles.html">
+            <a href="http://audiovisualiser.com/" target="_blank">
               <div class="project-content p-3">
-                <h4 class="project-text text-white">Bubbles</h4>
-                <p class="project-text text-white">Animation study</p>
+                <h4 class="project-text text-white">Audio Visualiser</h4>
               </div>
             </a>
           </div>
-          <div class="col-sm-12 col-md-6 col-lg-3 project p-3">
+          <div class="col-sm-12 col-md-12 project p-3">
+            <a href="https://webdesigncoder.com/" target="_blank">
+              <div class="project-content p-3">
+                <h4 class="project-text text-white">Design Portfolio</h4>
+              </div>
+            </a>
+          </div>
+          <!--<div class="col-sm-12 col-md-6 col-lg-3 project p-3">
             <a href="projects/waveform.html">
               <div class="project-content p-3">
                 <h4 class="project-text text-white">Waveform</h4>
@@ -123,7 +106,7 @@
                 <p class="project-text text-white">Game study</p>
               </div>
             </a>
-          </div>
+          </div>-->
           <!--<div class="col-sm-12 col-md-5 project p-3">
             <a href="projects/barba-tutorial.html">
               <div class="project-content p-3">
