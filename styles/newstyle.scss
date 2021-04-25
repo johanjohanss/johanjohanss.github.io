@@ -38,6 +38,23 @@ body {
   overflow-x: hidden;
 }
 
+h1, h2, h3, h4, h5, h6{
+  //font-family: "RNSSemiBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#svgshape{
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 0;
+}
+.about-page{
+  *{
+    z-index: 1;
+  }
+  background-color: white;
+}
+
 .bottom-text{
   font-size: 0.85rem;
   color: rgb(206, 206, 206);
@@ -45,6 +62,10 @@ body {
 
 .animation-wrapper {
   min-height: 100vh;
+}
+
+.link{
+  color: #257dcf;
 }
 
 #main_header {
@@ -276,6 +297,9 @@ a:hover {
 @media (max-width: 767px) {
   #headerlogo{
     display: none !important;
+  }
+  #me-img{
+    align-items: flex-start !important;
   }
 }
 

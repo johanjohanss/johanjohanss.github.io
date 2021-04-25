@@ -39,6 +39,21 @@ body {
   overflow-x: hidden;
 }
 
+#svgshape {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 0;
+}
+
+.about-page {
+  background-color: white;
+}
+
+.about-page * {
+  z-index: 1;
+}
+
 .bottom-text {
   font-size: 0.85rem;
   color: #cecece;
@@ -46,6 +61,10 @@ body {
 
 .animation-wrapper {
   min-height: 100vh;
+}
+
+.link {
+  color: #257dcf;
 }
 
 #main_header {
@@ -348,6 +367,11 @@ a:hover {
 @media (max-width: 767px) {
   #headerlogo {
     display: none !important;
+  }
+  #me-img {
+    -webkit-box-align: start !important;
+        -ms-flex-align: start !important;
+            align-items: flex-start !important;
   }
 }
 
