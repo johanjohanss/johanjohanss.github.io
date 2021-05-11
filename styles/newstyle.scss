@@ -67,8 +67,13 @@ h1, h2, h3, h4, h5, h6{
 .link{
   color: #257dcf;
 }
-
 #main_header {
+
+  /*background-image: url("../svg/gp.svg");
+  background-size: contain;
+  background-repeat: repeat;
+  background-blend-mode: luminosity;*/
+
   background-color: $blue;
   border-radius: 0% 0% 1rem 1rem;
   height: 82vh;
@@ -104,7 +109,6 @@ h1, h2, h3, h4, h5, h6{
       border: none;
       color: rgb(255, 255, 255);
       background-color: #EC5A80;
-
 
       transform: scale(1);
       transition: all 0.25s ease;
