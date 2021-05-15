@@ -160,18 +160,32 @@ nav{
   display: flex;
   flex-direction: row;
 }
+#page-title{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: $blackColor;
+  line-height: 5rem;
+}
+.page-title-class{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: $blackColor;
+  line-height: 5rem;
+}
+.h1-title{
+  font-family: "RNSSemiBold";
+  font-size: 5rem;
+  color: $blackColor;
+  position: relative;
+  z-index: 2;
+}
 #main_header {
 
   position: relative;
-
-  #page-title{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: $blackColor;
-    line-height: 5rem;
-  }
 
   #blob1{
     position: absolute;
@@ -333,6 +347,41 @@ a,
 a:hover {
   text-decoration: none;
 }
+
+
+
+
+/* ABOUT PAGE */
+#aboutpage{
+  padding-top: 8.5rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+#social-links{
+  a{
+    display: block;
+    width: 22%;
+    padding: 1.5rem 3rem;
+    img{
+      width: 100%;
+    }
+  }
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.emaillink{
+  font-size: 1.1rem;
+
+  color: rgb(255, 0, 0);
+}
+
+
 
 //Project divs
 .project {
@@ -534,6 +583,15 @@ $aboutColor: rgb(255, 255, 255);
   display: flex;
   justify-content: center;
   align-items: center;
+
+  animation: slideUp 1.5s ease forwards;
+  animation-delay: 1s;
+}
+
+@keyframes slideUp{
+  to{
+    transform: translateY(-110%);
+  }
 }
 
 //about me page
@@ -754,4 +812,12 @@ $aboutColor: rgb(255, 255, 255);
 //hide utility
 .hide {
   display: none !important;
+}
+
+.o0{
+  //opacity: 0;
+}
+
+.less-wide{
+  width: 55%;
 }
