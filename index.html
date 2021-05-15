@@ -15,35 +15,47 @@
 <body data-barba="wrapper">
 
   <!-- Transition elements -->
-  <div class="page-transition"><img src="svg/logo-v3.svg" width="20%" /></div>
+  <div class="page-transition"><img src="svg/newlogo.svg" width="20%" /></div>
   <div class="page-transition-about">
-    <img src="svg/logo-v3.svg" width="20%" />
+    <img src="svg/newlogo.svg" width="20%" />
   </div>
   <div class="page-transition-about-2">
-    <img src="svg/logo-v3.svg" width="20%" />
+    <img src="svg/newlogo.svg" width="20%" />
   </div>
 
   <!-- Transition element -->
-  <div class="once-transition"><img src="svg/logo-v3.svg" width="20%" /></div>
+  <div class="once-transition"><img class="newlogo-anim" src="svg/newlogo.svg" width="20%" /></div>
 
   <div class="animation-wrapper" data-barba="container" data-barba-namespace="home">
 
 
+    <nav id="main-nav">
+      <a>
+        <img src="svg/newlogo.svg" width="22%">
+      </a>
+      <div id="navlinks">
+        <a href="about.html">About</a>
+        <a id="back-top" href="#main_header">
+          <img src="svg/arrow-up-square-fill.svg" width="100%">
+        </a>
+      </div>
+    </nav>
+
     <header id="main_header">
         <div class="row">
-          <div id="h_div_1" class="col-md-6 col-sm-12">
-            <img src="svg/headertext.svg" width="90%" id="">
-            <div id="h_inner_div">
-              <p>web development, design and branding</p>
-            </div>
-            <div id="header_buttons">
-              <a href="https://www.instagram.com/webdesigncoder/" target="_blank" >Instagram</a>
-              <a href="https://www.youtube.com/channel/UCWAbw_aDttx6h61En4QOL_Q" target="_blank">Youtube</a>
-              <a href="about.html">About Me</a>
-            </div>
-          </div>
-          <div class="pl-3 col-md-6 col-sm-12 d-flex align-items-center justify-content-center" id="headerlogo">
-            <img src="svg/logo.svg" width="70%" id="jj-logo">
+          <div id="h_div_1" class="col-md-12 col-sm-12">
+            <img src="svg/webdesigncoder.svg" width="80%" id="wdc-text">
+            <svg width="80%" id="wdc-line" viewBox="0 0 1045 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.643606 23.5885C232.021 14.0269 764.484 2.33853 1043.32 32.078" stroke="url(#paint0_linear)" stroke-width="15.1667"/>
+              <defs>
+              <linearGradient id="paint0_linear" x1="-29.77" y1="33.3302" x2="1065.43" y2="0.539317" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#EF5277"/>
+              <stop offset="0.921875" stop-color="#B9CDE6"/>
+              </linearGradient>
+              </defs>
+              </svg>
+              
+            <!--<img src="svg/line-wdc.svg" width="80%" id="wdc-line">-->
           </div>
         </div>
     </header>
@@ -161,6 +173,16 @@
 
   <script src="https://unpkg.com/@barba/core"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+  <script src="https://unpkg.com/headroom.js"></script>
+
+  <script>
+    var header = document.getElementById("main-nav");
+    headroom = new Headroom(header, {
+
+    });
+    headroom.init();
+  </script>
+
   <script src="scripts/animation.js"></script>
   <script src="scripts/script.js"></script>
 </body>

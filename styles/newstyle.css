@@ -67,14 +67,144 @@ body {
   color: #257dcf;
 }
 
+nav {
+  position: fixed;
+  width: 100%;
+  padding: 0.25rem;
+  background-color: #f7f7f8;
+  -webkit-box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.055);
+          box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.055);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  z-index: 5;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+nav a {
+  display: block;
+  padding: 0.5rem;
+  color: #242424;
+  font-size: 1.2rem;
+}
+
+.newlogo-anim {
+  -webkit-animation: newlogoanim 1s ease forwards 1;
+          animation: newlogoanim 1s ease forwards 1;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+}
+
+@-webkit-keyframes newlogoanim {
+  0% {
+    -webkit-transform: scale(0) rotate(45deg);
+            transform: scale(0) rotate(45deg);
+  }
+  70% {
+    -webkit-transform: scale(1) rotate(0deg);
+            transform: scale(1) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: scale(0) rotate(0deg);
+            transform: scale(0) rotate(0deg);
+  }
+}
+
+@keyframes newlogoanim {
+  0% {
+    -webkit-transform: scale(0) rotate(45deg);
+            transform: scale(0) rotate(45deg);
+  }
+  70% {
+    -webkit-transform: scale(1) rotate(0deg);
+            transform: scale(1) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: scale(0) rotate(0deg);
+            transform: scale(0) rotate(0deg);
+  }
+}
+
+#back-top {
+  width: 3rem;
+  padding: 0.5rem;
+  margin-left: 1rem;
+  display: none;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.headroom--pinned {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+.headroom--unpinned {
+  -webkit-transform: translate3d(0, -100%, 0);
+          transform: translate3d(0, -100%, 0);
+}
+
+.headroom--pinned.headroom--not-top #back-top {
+  display: block;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+#wdc-text {
+  z-index: 1;
+}
+
+#wdc-line {
+  position: relative;
+  top: -2rem;
+  -webkit-animation: drawIn 2s ease forwards;
+          animation: drawIn 2s ease forwards;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+  stroke-dasharray: 1200;
+  stroke-dashoffset: 1200;
+}
+
+@-webkit-keyframes drawIn {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes drawIn {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+#navlinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
 #main_header {
   /*background-image: url("../svg/gp.svg");
   background-size: contain;
   background-repeat: repeat;
   background-blend-mode: luminosity;*/
-  background-color: #373C48;
   border-radius: 0% 0% 1rem 1rem;
-  height: 82vh;
+  height: 84vh;
   width: 100%;
   padding: 2rem;
   display: -webkit-box;
@@ -190,7 +320,7 @@ body {
 }
 
 #scroll_to_projects {
-  height: 18vh;
+  height: 16vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -208,22 +338,6 @@ body {
 .linktext {
   font-size: 1.3rem;
   font-family: "vietnamLight";
-}
-
-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
 }
 
 main {
