@@ -32,10 +32,12 @@ $bg-color: #f7f7f8;
 }
 
 html {
+  width: 100%;
   scroll-behavior: smooth;
 }
 
 body {
+  width: 100%;
   background-color: #f7f7f8;
   overflow-x: hidden;
 }
@@ -72,15 +74,15 @@ h1, h2, h3, h4, h5, h6{
 nav{
   position: fixed;
   width: 100%;
-  padding: 0.25rem;
+  padding: 0.35rem;
   background-color: $bg-color;
-  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.055);
+  
 
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-right: 1rem;
-  padding-left: 1rem;
+  padding-right: 1.25rem;
+  padding-left: 1.25rem;
 
   z-index: 5;
 
@@ -88,7 +90,7 @@ nav{
     display: block;
     padding: 0.5rem;
     color: $blackColor;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   transition: all 0.5s ease;
@@ -127,6 +129,9 @@ nav{
   transform: translate3d(0, -100%, 0);
 }
 
+.headroom--pinned.headroom--not-top{
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.055);
+}
 .headroom--pinned.headroom--not-top #back-top{
   display: block;
   transition: all 1s ease;
@@ -157,6 +162,68 @@ nav{
 }
 #main_header {
 
+  position: relative;
+
+  #page-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $blackColor;
+    line-height: 5rem;
+  }
+
+  #blob1{
+    position: absolute;
+    left: -4rem;
+    top: 12rem;
+
+    transform: rotate(15deg) translateY(30%);
+    transition: all 1s ease;
+    animation: blobanim 2s ease forwards;
+    animation-delay: 1s;
+  }
+  @keyframes blobanim{
+    to{
+      transform: rotate(0deg) translateY(0);
+    }
+  }
+  #blob2{
+    position: absolute;
+    right: -4rem;
+    top: 8rem;
+    transform: rotate(-10deg) translateY(20%);
+    transition: all 1s ease;
+    animation: blobanim 3.5s ease forwards;
+    animation-delay: 1s;
+  }
+  #blob3{
+    position: absolute;
+    right: 12rem;
+    top: 30rem;
+    transform: rotate(15deg) translateY(30%);
+    transition: all 1s ease;
+    animation: blobanim 2.5s ease forwards;
+    animation-delay: 1s;
+  }
+  #blob4{
+    position: absolute;
+    left: 10rem;
+    top: 6rem;transform: rotate(15deg) translateY(40%);
+    transition: all 1s ease;
+    animation: blobanim 3s ease forwards;
+    animation-delay: 1s;
+  }
+  #blob5{
+    position: absolute;
+    right: 5rem;
+    top: 47rem;
+    transform: rotate(15deg) translateY(80%);
+    transition: all 1s ease;
+    animation: blobanim 4s ease forwards;
+    animation-delay: 1s;
+  }
+
   /*background-image: url("../svg/gp.svg");
   background-size: contain;
   background-repeat: repeat;
@@ -168,8 +235,9 @@ nav{
   width: 100%;
 
   padding: 2rem;
+  padding-top: 4rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
@@ -196,7 +264,7 @@ nav{
       padding: 0.5rem;
       border-radius: 0.5rem;
       border: none;
-      color: rgb(255, 255, 255);
+      color: $blackColor;
       background-color: #EC5A80;
 
       transform: scale(1);
@@ -225,7 +293,7 @@ nav{
   h1{
     font-family: "RNSSemiBold";
     font-size: 5rem;
-    color: white;
+    color: $blackColor;
     position: relative;
     z-index: 2;
   }
@@ -237,7 +305,7 @@ nav{
   p {
     font-size: 1.3rem;
     font-family: "RNSSemiBold";
-    color: white;
+    color: $blackColor;
     margin-top: 2rem;
   }
   

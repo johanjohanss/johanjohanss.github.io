@@ -31,10 +31,12 @@
 }
 
 html {
+  width: 100%;
   scroll-behavior: smooth;
 }
 
 body {
+  width: 100%;
   background-color: #f7f7f8;
   overflow-x: hidden;
 }
@@ -70,10 +72,8 @@ body {
 nav {
   position: fixed;
   width: 100%;
-  padding: 0.25rem;
+  padding: 0.35rem;
   background-color: #f7f7f8;
-  -webkit-box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.055);
-          box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.055);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -83,8 +83,8 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-right: 1rem;
-  padding-left: 1rem;
+  padding-right: 1.25rem;
+  padding-left: 1.25rem;
   z-index: 5;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
@@ -94,7 +94,7 @@ nav a {
   display: block;
   padding: 0.5rem;
   color: #242424;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .newlogo-anim {
@@ -155,6 +155,11 @@ nav a {
           transform: translate3d(0, -100%, 0);
 }
 
+.headroom--pinned.headroom--not-top {
+  -webkit-box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.055);
+          box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.055);
+}
+
 .headroom--pinned.headroom--not-top #back-top {
   display: block;
   -webkit-transition: all 1s ease;
@@ -199,6 +204,7 @@ nav a {
 }
 
 #main_header {
+  position: relative;
   /*background-image: url("../svg/gp.svg");
   background-size: contain;
   background-repeat: repeat;
@@ -207,19 +213,122 @@ nav a {
   height: 84vh;
   width: 100%;
   padding: 2rem;
+  padding-top: 4rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+#main_header #page-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #242424;
+  line-height: 5rem;
+}
+
+#main_header #blob1 {
+  position: absolute;
+  left: -4rem;
+  top: 12rem;
+  -webkit-transform: rotate(15deg) translateY(30%);
+          transform: rotate(15deg) translateY(30%);
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  -webkit-animation: blobanim 2s ease forwards;
+          animation: blobanim 2s ease forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+@-webkit-keyframes blobanim {
+  to {
+    -webkit-transform: rotate(0deg) translateY(0);
+            transform: rotate(0deg) translateY(0);
+  }
+}
+
+@keyframes blobanim {
+  to {
+    -webkit-transform: rotate(0deg) translateY(0);
+            transform: rotate(0deg) translateY(0);
+  }
+}
+
+#main_header #blob2 {
+  position: absolute;
+  right: -4rem;
+  top: 8rem;
+  -webkit-transform: rotate(-10deg) translateY(20%);
+          transform: rotate(-10deg) translateY(20%);
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  -webkit-animation: blobanim 3.5s ease forwards;
+          animation: blobanim 3.5s ease forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+#main_header #blob3 {
+  position: absolute;
+  right: 12rem;
+  top: 30rem;
+  -webkit-transform: rotate(15deg) translateY(30%);
+          transform: rotate(15deg) translateY(30%);
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  -webkit-animation: blobanim 2.5s ease forwards;
+          animation: blobanim 2.5s ease forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+#main_header #blob4 {
+  position: absolute;
+  left: 10rem;
+  top: 6rem;
+  -webkit-transform: rotate(15deg) translateY(40%);
+          transform: rotate(15deg) translateY(40%);
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  -webkit-animation: blobanim 3s ease forwards;
+          animation: blobanim 3s ease forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+#main_header #blob5 {
+  position: absolute;
+  right: 5rem;
+  top: 47rem;
+  -webkit-transform: rotate(15deg) translateY(80%);
+          transform: rotate(15deg) translateY(80%);
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  -webkit-animation: blobanim 4s ease forwards;
+          animation: blobanim 4s ease forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 #main_header #h_div_1 {
@@ -266,7 +375,7 @@ nav a {
   padding: 0.5rem;
   border-radius: 0.5rem;
   border: none;
-  color: white;
+  color: #242424;
   background-color: #EC5A80;
   -webkit-transform: scale(1);
           transform: scale(1);
@@ -301,7 +410,7 @@ nav a {
 #main_header h1 {
   font-family: "RNSSemiBold";
   font-size: 5rem;
-  color: white;
+  color: #242424;
   position: relative;
   z-index: 2;
 }
@@ -315,7 +424,7 @@ nav a {
 #main_header p {
   font-size: 1.3rem;
   font-family: "RNSSemiBold";
-  color: white;
+  color: #242424;
   margin-top: 2rem;
 }
 
