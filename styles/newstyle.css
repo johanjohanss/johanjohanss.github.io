@@ -536,7 +536,7 @@ a:hover {
 
 .emaillink {
   font-size: 1.1rem;
-  color: red;
+  color: #fdb3a1;
 }
 
 .project {
@@ -1059,5 +1059,73 @@ footer {
 
 .less-wide {
   width: 55%;
+}
+
+/* CONTACT FORM */
+#contact-form {
+  margin-top: 3rem;
+  width: 60%;
+}
+
+.form-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form-textbox {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  padding: 0.4rem;
+  margin-top: 0.75rem;
+  border: none;
+  border-bottom: 1px solid #2e2e2e;
+  background: transparent;
+}
+
+.form-textbox:not(:placeholder-shown) {
+  border-bottom: 2px solid #fdb3a1;
+}
+
+.form-textbox:focus {
+  border-bottom: 5px solid #fdb3a1;
+  outline-color: #fdb3a1;
+}
+
+.form-textarea {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  padding: 0.4rem;
+  border-radius: 0.25rem;
+  margin-top: 1.5rem;
+  background: transparent;
+  background-color: transparent;
+  border: 1px solid #2e2e2e;
+  outline-color: #fdb3a1;
+}
+
+.form-textarea:not(:placeholder-shown) {
+  border: 2px solid #fdb3a1;
+}
+
+.form-submit {
+  padding: 0.7rem 2rem;
+  background: transparent;
+  border: 1px solid #2e2e2e;
+  border-radius: 0.25rem;
+}
+
+.form-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 2rem;
 }
 /*# sourceMappingURL=newstyle.css.map */
