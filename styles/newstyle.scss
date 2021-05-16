@@ -3,9 +3,6 @@ $yellowColor: rgb(255, 245, 104);
 $blue: #373C48;
 $header-color: #EAEAEA;
 $bg-color: #f7f7f8;
-
-
-//$formColor: #047AFB;
 $formColor: #fdb3a1;
 
 @font-face {
@@ -45,10 +42,6 @@ body {
   min-width: 100%;
   background-color: #f7f7f8;
   overflow-x: hidden;
-}
-
-h1, h2, h3, h4, h5, h6{
-  //font-family: "RNSSemiBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 #svgshape{
@@ -126,17 +119,13 @@ nav{
   display: none;
   transition: all 1s ease;
 }
-//headroom
+/* HEADROOM */
 .headroom--pinned{
   transform: translate3d(0, 0, 0);
 }
 .headroom--unpinned{
   transform: translate3d(0, -100%, 0);
 }
-/*.headroom--unpinned.headroom--not-top #back-top{
-  display: block;
-}*/
-
 .headroom--pinned.headroom--not-top{
   box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.055);
 }
@@ -144,25 +133,12 @@ nav{
   display: block;
   transition: all 1s ease;
 }
-#wdc-text{
-  z-index: 1;
-}
-#wdc-line{
-  position: relative;
-  top: -2rem;
-  animation: drawIn 2s ease forwards;
-  animation-delay: 1.5s;
-
-  stroke-dasharray: 1200;
-  stroke-dashoffset: 1200;
-}
 
 @keyframes drawIn{
   to{
     stroke-dashoffset: 0;
   }
 }
-
 
 #navlinks{
   display: flex;
@@ -206,11 +182,6 @@ nav{
     animation: blobanim 2s ease forwards;
     animation-delay: 1s;
   }
-  @keyframes blobanim{
-    to{
-      transform: rotate(0deg) translateY(0);
-    }
-  }
   #blob2{
     position: absolute;
     right: -4rem;
@@ -246,13 +217,12 @@ nav{
     animation: blobanim 4s ease forwards;
     animation-delay: 1s;
   }
+  @keyframes blobanim{
+    to{
+      transform: rotate(0deg) translateY(0);
+    }
+  }
 
-  /*background-image: url("../svg/gp.svg");
-  background-size: contain;
-  background-repeat: repeat;
-  background-blend-mode: luminosity;*/
-
-  //background-color: $blue;
   border-radius: 0% 0% 1rem 1rem;
   height: 84vh;
   width: 100%;
@@ -263,46 +233,6 @@ nav{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  #h_div_1{
-    width: 80%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  #h_inner_div{
-    width: 90%;
-  }
-  #header_buttons{
-    width: 90%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;;
-    margin-top: 1.5rem;
-    a{
-
-      margin-right: 1.1rem;
-      padding: 0.5rem;
-      border-radius: 0.5rem;
-      border: none;
-      color: $blackColor;
-      background-color: #EC5A80;
-
-      transform: scale(1);
-      transition: all 0.25s ease;
-
-      &:hover{
-        transform: scale(1.1);
-        transition: all 0.25s ease;
-        color: rgb(255, 255, 255);
-        background-color: #EC5A80;
-        cursor: pointer;
-      }
-    }
-
-  }
 
   #jj-logo{
     transform: scale(1) rotate(0deg);
@@ -378,9 +308,6 @@ a:hover {
     img{
       width: 100%;
     }
-    img{
-      
-    }
   }
   display: flex;
   flex-direction: row;
@@ -389,7 +316,6 @@ a:hover {
 }
 .emaillink{
   font-size: 1.1rem;
-
   color: $formColor;
 }
 
@@ -398,20 +324,16 @@ a:hover {
 //Project divs
 .project {
   height: 20rem;
-  //border: 1px solid green;
 }
 .project-content {
   width: 100%;
   height: 100%;
-  //border: 1px solid black;
-  //background-image: url(svg/blob-bg.svg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   box-shadow: inset 5px 5px 300px rgba(0, 0, 0, 0),
     4px 4px 5px rgba(0, 0, 0, 0.123);
   transition: box-shadow 0.25s ease-in-out;
-  //border: 2px solid rgb(255, 255, 255);
   p {
     margin-top: 0.2rem;
   }
@@ -425,15 +347,6 @@ a:hover {
 }
 .project:nth-child(3) .project-content {
   background-image: url(../svg/designportfolio.svg);
-}
-.project:nth-child(4) .project-content {
-  //background-image: url(../img/tattoo-bg.jpg);
-}
-.project:nth-child(5) .project-content {
-  //background-image: url(../img/tetris-bg.svg);
-}
-.project:nth-child(6) .project-content {
-  //background-image: url(../img/barba-bg.svg);
 }
 
 .img-cover {
@@ -468,7 +381,6 @@ a:hover {
 
 #logo {
   width: 15%;
-  //border: 1px solid black;
 }
 
 //Cookies
@@ -525,59 +437,6 @@ footer {
   width: 100%;
 }
 
-//barba
-.page-transition {
-  background-color: rgb(255, 245, 104);
-  position: fixed;
-  z-index: 10;
-  height: 100vh;
-  width: 100%;
-  top: 0;
-  left: 0;
-  margin: 0;
-  pointer-events: none;
-  transform: scaleX(0);
-  //transform: translateX(-100%);
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-$aboutColor: rgb(255, 255, 255);
-.page-transition-about {
-  background-color: $aboutColor;
-  position: fixed;
-  z-index: 10;
-  height: 100vh;
-  width: 100%;
-  top: 0;
-  left: 0;
-  margin: 0;
-  pointer-events: none;
-  transform: scaleY(0);
-  //transform: translateX(-100%);
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.page-transition-about-2 {
-  background-color: #f7f7f8; //rgb(31, 31, 31);
-  position: fixed;
-  z-index: 10;
-  height: 100vh;
-  width: 100%;
-  top: 0;
-  left: 0;
-  margin: 0;
-  pointer-events: none;
-  transform: scaleY(0);
-  //transform: translateX(-100%);
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .once-transition {
   background-color: rgb(255, 255, 248);
   position: fixed;
@@ -588,9 +447,7 @@ $aboutColor: rgb(255, 255, 255);
   left: 0;
   margin: 0;
   pointer-events: none;
-  //transform: scaleY(1);
   transform: translateY(0);
-  //transform: skewY(0);
 
   display: flex;
   justify-content: center;
@@ -624,11 +481,6 @@ $aboutColor: rgb(255, 255, 255);
 }
 
 #back {
-  //width: 100%;
-  //height: 2000px;
-  //position: fixed;
-  //top: 0rem;
-  //left: 0rem;
   background-color: rgb(245, 245, 245);
   background-image: linear-gradient(to top, rgb(46, 46, 45), rgb(80, 80, 80));
 
@@ -686,134 +538,6 @@ $aboutColor: rgb(255, 255, 255);
   }
 }
 
-//Circle animation
-
-.circle-move {
-  position: absolute;
-  z-index: 1;
-  opacity: 0.5; //0.35;
-}
-.bubble-container {
-  height: 100vh;
-  overflow: hidden;
-}
-.debris {
-  width: 2px;
-  height: 2px;
-  background-color: #de6c83;
-  position: absolute;
-}
-
-//tetris styles
-#gamefield {
-  background-color: #fffadf;
-  padding: 2rem;
-  border-radius: 0.25rem;
-  width: 60%;
-  margin-top: 2rem;
-  margin-bottom: 3rem;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.103);
-}
-
-#start-button {
-  padding: 0.25rem;
-  background-color: $blackColor;
-  color: white;
-  border: none;
-  border-radius: 0.25rem;
-  margin-bottom: 1rem;
-  width: 160px;
-  height: 50px;
-  outline: none;
-  font-size: 1rem;
-
-  &:hover {
-    //border: 1px solid black;
-  }
-}
-#score {
-  color: $blackColor;
-}
-
-.tetris-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  margin-bottom: 4rem;
-}
-
-.mini-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /*border: 1px solid black;*/
-}
-
-.grid {
-  box-sizing: content-box;
-  border: 1px solid $blackColor;
-
-  width: 300px;
-  height: 600px;
-  background-color: $blackColor;
-
-  display: flex;
-  flex-wrap: wrap;
-
-  div {
-    height: 30px;
-    width: 30px;
-  }
-}
-
-.mini-grid {
-  box-sizing: content-box;
-  border: 2px solid $blackColor;
-
-  width: 80px;
-  height: 80px;
-  margin-left: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  background-color: $blackColor;
-
-  div {
-    height: 20px;
-    width: 20px;
-  }
-}
-
-.tetromino {
-  background-color: $yellowColor;
-}
-#highscore > p {
-  color: $blackColor;
-  font-size: 1.5rem;
-}
-#tetris-wrapper {
-  background-color: #f7f7f8;
-  background-image: url(../img/tetris-page-bg.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-//three js page
-.three-wrapper{
-    background-color: #f7f7f8;
-    background-image: url(../three/svg/symbol-bg.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 100vh;
-    width: 100%;
-}
-
-//
 .codetext{
   width: 90%;
   background-color: rgb(36, 36, 36);
@@ -826,14 +550,9 @@ $aboutColor: rgb(255, 255, 255);
   display: none !important;
 }
 
-.o0{
-  //opacity: 0;
-}
-
 .less-wide{
   width: 55%;
 }
-
 
 /* CONTACT FORM */
 
@@ -862,7 +581,6 @@ $aboutColor: rgb(255, 255, 255);
 
 .form-textbox:focus{
   border-bottom: 5px solid $formColor;
-  //outline: 1px solid rgb(79, 126, 255);
   outline-color: $formColor;
 }
 

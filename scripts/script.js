@@ -67,11 +67,6 @@ window.addEventListener("load", function(){
 function scrollCalculation(){
 
 	let scrollY = window.scrollY;
-	console.log(scrollY)
-
-
-	let pageTitle = document.getElementById("page-title");
-	let pageUnderTitle = document.getElementById("page-undertitle");
 
 	let blob1 = document.getElementById("blob1");
 	let blob2 = document.getElementById("blob2");
