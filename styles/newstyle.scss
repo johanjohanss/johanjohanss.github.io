@@ -32,12 +32,13 @@ $bg-color: #f7f7f8;
 }
 
 html {
-  width: 100%;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   width: 100%;
+  min-width: 100%;
   background-color: #f7f7f8;
   overflow-x: hidden;
 }
@@ -128,6 +129,9 @@ nav{
 .headroom--unpinned{
   transform: translate3d(0, -100%, 0);
 }
+/*.headroom--unpinned.headroom--not-top #back-top{
+  display: block;
+}*/
 
 .headroom--pinned.headroom--not-top{
   box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.055);
@@ -353,7 +357,7 @@ a:hover {
 
 /* ABOUT PAGE */
 #aboutpage{
-  padding-top: 8.5rem;
+  padding-top: 9.5rem;
 
   display: flex;
   flex-direction: column;
