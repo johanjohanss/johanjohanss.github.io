@@ -223,6 +223,8 @@ nav a {
           align-items: center;
   color: #242424;
   line-height: 5rem;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
 .page-title-class {
@@ -283,8 +285,8 @@ nav a {
   top: 12rem;
   -webkit-transform: rotate(15deg) translateY(30%);
           transform: rotate(15deg) translateY(30%);
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
   -webkit-animation: blobanim 2s ease forwards;
           animation: blobanim 2s ease forwards;
   -webkit-animation-delay: 1s;
@@ -311,8 +313,8 @@ nav a {
   top: 8rem;
   -webkit-transform: rotate(-10deg) translateY(20%);
           transform: rotate(-10deg) translateY(20%);
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
   -webkit-animation: blobanim 3.5s ease forwards;
           animation: blobanim 3.5s ease forwards;
   -webkit-animation-delay: 1s;
@@ -325,8 +327,8 @@ nav a {
   top: 30rem;
   -webkit-transform: rotate(15deg) translateY(30%);
           transform: rotate(15deg) translateY(30%);
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
   -webkit-animation: blobanim 2.5s ease forwards;
           animation: blobanim 2.5s ease forwards;
   -webkit-animation-delay: 1s;
@@ -339,8 +341,8 @@ nav a {
   top: 6rem;
   -webkit-transform: rotate(15deg) translateY(40%);
           transform: rotate(15deg) translateY(40%);
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
   -webkit-animation: blobanim 3s ease forwards;
           animation: blobanim 3s ease forwards;
   -webkit-animation-delay: 1s;
@@ -353,8 +355,8 @@ nav a {
   top: 47rem;
   -webkit-transform: rotate(15deg) translateY(80%);
           transform: rotate(15deg) translateY(80%);
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
   -webkit-animation: blobanim 4s ease forwards;
           animation: blobanim 4s ease forwards;
   -webkit-animation-delay: 1s;
@@ -524,7 +526,7 @@ a:hover {
 
 #social-links a {
   display: block;
-  width: 22%;
+  width: 15%;
   padding: 1.5rem 3rem;
 }
 

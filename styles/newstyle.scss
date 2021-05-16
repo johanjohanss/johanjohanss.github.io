@@ -171,6 +171,7 @@ nav{
   align-items: center;
   color: $blackColor;
   line-height: 5rem;
+  transition: all 1s ease;
 }
 .page-title-class{
   display: flex;
@@ -197,7 +198,7 @@ nav{
     top: 12rem;
 
     transform: rotate(15deg) translateY(30%);
-    transition: all 1s ease;
+    transition: all 2s ease;
     animation: blobanim 2s ease forwards;
     animation-delay: 1s;
   }
@@ -211,7 +212,7 @@ nav{
     right: -4rem;
     top: 8rem;
     transform: rotate(-10deg) translateY(20%);
-    transition: all 1s ease;
+    transition: all 2s ease;
     animation: blobanim 3.5s ease forwards;
     animation-delay: 1s;
   }
@@ -220,7 +221,7 @@ nav{
     right: 12rem;
     top: 30rem;
     transform: rotate(15deg) translateY(30%);
-    transition: all 1s ease;
+    transition: all 2s ease;
     animation: blobanim 2.5s ease forwards;
     animation-delay: 1s;
   }
@@ -228,7 +229,7 @@ nav{
     position: absolute;
     left: 10rem;
     top: 6rem;transform: rotate(15deg) translateY(40%);
-    transition: all 1s ease;
+    transition: all 2s ease;
     animation: blobanim 3s ease forwards;
     animation-delay: 1s;
   }
@@ -237,7 +238,7 @@ nav{
     right: 5rem;
     top: 47rem;
     transform: rotate(15deg) translateY(80%);
-    transition: all 1s ease;
+    transition: all 2s ease;
     animation: blobanim 4s ease forwards;
     animation-delay: 1s;
   }
@@ -368,10 +369,13 @@ a:hover {
 #social-links{
   a{
     display: block;
-    width: 22%;
+    width: 15%;
     padding: 1.5rem 3rem;
     img{
       width: 100%;
+    }
+    img{
+      
     }
   }
   display: flex;

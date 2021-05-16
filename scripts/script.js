@@ -57,4 +57,47 @@ window.addEventListener("load", function(){
 
 		});
 	});
+
+
+	window.addEventListener("scroll", scrollCalculation)
+
+
 });
+
+function scrollCalculation(){
+
+	let scrollY = window.scrollY;
+	console.log(scrollY)
+
+
+	let pageTitle = document.getElementById("page-title");
+	let pageUnderTitle = document.getElementById("page-undertitle");
+
+	let blob1 = document.getElementById("blob1");
+	let blob2 = document.getElementById("blob2");
+	let blob3 = document.getElementById("blob3");
+	let blob4 = document.getElementById("blob4");
+	let blob5 = document.getElementById("blob5");
+
+
+	/*if(scrollY > 120 && scrollY < 400){
+		pageTitle.style.top = scrollY - scrollY * 2 + "px";
+	}else if(scrollY < 250){
+		pageTitle.style.top = 0;
+	}*/
+
+	if(scrollY > 250 && scrollY < 400){
+		blob1.style.top = scrollY / 1.4 + "px";
+		blob2.style.top = scrollY / 3 + "px";
+	}
+
+	if(scrollY > 350 && scrollY < 450){
+		blob3.style.top = scrollY * 1.23 + "px";
+		blob4.style.top = scrollY / 15 + "px";
+		blob5.style.top = scrollY * 2.1 + "px";
+	}else if(scrollY < 350){
+		blob3.style.top = 30 + "rem";
+		blob4.style.top = 6 + "rem";
+		blob5.style.top = 47 + "rem";
+	}
+}
