@@ -502,6 +502,10 @@ a:hover {
   background-image: url(../img/dobble.png);
 }
 
+.project:nth-child(5) .project-content {
+  background-image: url(../img/chat.png);
+}
+
 .img-cover {
   -o-object-fit: cover;
      object-fit: cover;
