@@ -1,9 +1,10 @@
 $blackColor: #242424;
 $yellowColor: rgb(255, 245, 104);
-$blue: #373C48;
-$header-color: #EAEAEA;
+$blue: #373c48;
+$header-color: #eaeaea;
 $bg-color: #f7f7f8;
 $formColor: #fdb3a1;
+$activeColor: #aca4fe;
 
 @font-face {
   font-family: "vietnam";
@@ -44,20 +45,20 @@ body {
   overflow-x: hidden;
 }
 
-#svgshape{
+#svgshape {
   position: absolute;
   right: 0;
   top: 0;
   z-index: 0;
 }
-.about-page{
-  *{
+.about-page {
+  * {
     z-index: 1;
   }
   background-color: white;
 }
 
-.bottom-text{
+.bottom-text {
   font-size: 0.85rem;
   color: rgb(206, 206, 206);
 }
@@ -66,15 +67,14 @@ body {
   min-height: 100vh;
 }
 
-.link{
+.link {
   color: #257dcf;
 }
-nav{
+nav {
   position: fixed;
   width: 100%;
   padding: 0.35rem;
   background-color: $bg-color;
-  
 
   display: flex;
   justify-content: space-between;
@@ -84,7 +84,7 @@ nav{
 
   z-index: 5;
 
-  a{
+  a {
     display: block;
     padding: 0.5rem;
     color: $blackColor;
@@ -94,25 +94,25 @@ nav{
   transition: all 0.5s ease;
 }
 
-.newlogo-anim{
+.newlogo-anim {
   animation: newlogoanim 1s ease forwards 1;
   transform: scale(0);
   animation-delay: 0.25s;
 }
 
-@keyframes newlogoanim{
-  0%{
+@keyframes newlogoanim {
+  0% {
     transform: scale(0) rotate(45deg);
   }
-  70%{
+  70% {
     transform: scale(1) rotate(0deg);
   }
-  100%{
+  100% {
     transform: scale(0) rotate(0deg);
   }
 }
 
-#back-top{
+#back-top {
   width: 3rem;
   padding: 0.5rem;
   margin-left: 1rem;
@@ -120,31 +120,39 @@ nav{
   transition: all 1s ease;
 }
 /* HEADROOM */
-.headroom--pinned{
+.headroom--pinned {
   transform: translate3d(0, 0, 0);
 }
-.headroom--unpinned{
+.headroom--unpinned {
   transform: translate3d(0, -100%, 0);
 }
-.headroom--pinned.headroom--not-top{
+.headroom--pinned.headroom--not-top {
   box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.055);
 }
-.headroom--pinned.headroom--not-top #back-top{
+.headroom--pinned.headroom--not-top #back-top {
   display: block;
   transition: all 1s ease;
 }
 
-@keyframes drawIn{
-  to{
+@keyframes drawIn {
+  to {
     stroke-dashoffset: 0;
   }
 }
 
-#navlinks{
+#navlinks {
   display: flex;
   flex-direction: row;
+
+  a {
+    font-family: RNSSemiBold;
+  }
 }
-#page-title{
+.nav-active {
+  color: $activeColor;
+}
+
+#page-title {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -153,7 +161,7 @@ nav{
   line-height: 5rem;
   transition: all 1s ease;
 }
-.page-title-class{
+.page-title-class {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -161,7 +169,7 @@ nav{
   color: $blackColor;
   line-height: 5rem;
 }
-.h1-title{
+.h1-title {
   font-family: "RNSSemiBold";
   font-size: 5rem;
   color: $blackColor;
@@ -169,10 +177,9 @@ nav{
   z-index: 2;
 }
 #main_header {
-
   position: relative;
 
-  #blob1{
+  #blob1 {
     position: absolute;
     left: -4rem;
     top: 12rem;
@@ -182,7 +189,7 @@ nav{
     animation: blobanim 2s ease forwards;
     animation-delay: 1s;
   }
-  #blob2{
+  #blob2 {
     position: absolute;
     right: -4rem;
     top: 8rem;
@@ -191,7 +198,7 @@ nav{
     animation: blobanim 3.5s ease forwards;
     animation-delay: 1s;
   }
-  #blob3{
+  #blob3 {
     position: absolute;
     right: 12rem;
     top: 30rem;
@@ -200,15 +207,16 @@ nav{
     animation: blobanim 2.5s ease forwards;
     animation-delay: 1s;
   }
-  #blob4{
+  #blob4 {
     position: absolute;
     left: 10rem;
-    top: 6rem;transform: rotate(15deg) translateY(40%);
+    top: 6rem;
+    transform: rotate(15deg) translateY(40%);
     transition: all 2s ease;
     animation: blobanim 3s ease forwards;
     animation-delay: 1s;
   }
-  #blob5{
+  #blob5 {
     position: absolute;
     right: 5rem;
     top: 47rem;
@@ -217,8 +225,8 @@ nav{
     animation: blobanim 4s ease forwards;
     animation-delay: 1s;
   }
-  @keyframes blobanim{
-    to{
+  @keyframes blobanim {
+    to {
       transform: rotate(0deg) translateY(0);
     }
   }
@@ -234,23 +242,23 @@ nav{
   justify-content: center;
   align-items: center;
 
-  #jj-logo{
+  #jj-logo {
     transform: scale(1) rotate(0deg);
     transition: all 0.5s ease;
-    &:hover{
+    &:hover {
       transform: scale(1.05) rotate(10deg);
       transition: all 0.5s ease;
     }
   }
 
-  h1{
+  h1 {
     font-family: "RNSSemiBold";
     font-size: 5rem;
     color: $blackColor;
     position: relative;
     z-index: 2;
   }
-  #h_underline{
+  #h_underline {
     position: relative;
     top: -2rem;
     left: -1rem;
@@ -261,10 +269,9 @@ nav{
     color: $blackColor;
     margin-top: 2rem;
   }
-  
 }
 
-#scroll_to_projects{
+#scroll_to_projects {
   height: 16vh;
   display: flex;
   justify-content: center;
@@ -287,25 +294,21 @@ a:hover {
   text-decoration: none;
 }
 
-
-
-
 /* ABOUT PAGE */
-#aboutpage{
+#aboutpage {
   padding-top: 9.5rem;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
-#social-links{
-  a{
+#social-links {
+  a {
     display: block;
     width: 15%;
     padding: 1.5rem 3rem;
-    img{
+    img {
       width: 100%;
     }
   }
@@ -314,12 +317,10 @@ a:hover {
   justify-content: center;
   align-items: center;
 }
-.emaillink{
+.emaillink {
   font-size: 1.1rem;
   color: $formColor;
 }
-
-
 
 //Project divs
 .project {
@@ -347,6 +348,9 @@ a:hover {
 }
 .project:nth-child(3) .project-content {
   background-image: url(../svg/designportfolio.svg);
+}
+.project:nth-child(4) .project-content {
+  background-image: url(../img/dobble.png);
 }
 
 .img-cover {
@@ -423,10 +427,10 @@ a:hover {
 
 //media queries
 @media (max-width: 767px) {
-  #headerlogo{
+  #headerlogo {
     display: none !important;
   }
-  #me-img{
+  #me-img {
     align-items: flex-start !important;
   }
 }
@@ -457,14 +461,14 @@ footer {
   animation-delay: 1s;
 }
 
-@keyframes slideUp{
-  to{
+@keyframes slideUp {
+  to {
     transform: translateY(-110%);
   }
 }
 
 //about me page
-.about-title{
+.about-title {
   color: rgba(30, 79, 139, 0.897);
 }
 
@@ -505,7 +509,7 @@ footer {
   z-index: 8;
   transition: transform 0.5s;
   transform: scale(1);
-  
+
   text-shadow: 4px 4px 4px black;
 }
 #backarrow:hover {
@@ -538,7 +542,7 @@ footer {
   }
 }
 
-.codetext{
+.codetext {
   width: 90%;
   background-color: rgb(36, 36, 36);
   color: white;
@@ -550,23 +554,23 @@ footer {
   display: none !important;
 }
 
-.less-wide{
+.less-wide {
   width: 55%;
 }
 
 /* CONTACT FORM */
 
-#contact-form{
+#contact-form {
   margin-top: 3rem;
   width: 60%;
 }
 
-.form-group{
+.form-group {
   display: flex;
   flex-direction: column;
 }
 
-.form-textbox{
+.form-textbox {
   transition: all 0.5s ease;
   padding: 0.4rem;
   margin-top: 0.75rem;
@@ -575,16 +579,16 @@ footer {
   background: transparent;
 }
 
-.form-textbox:not(:placeholder-shown){
+.form-textbox:not(:placeholder-shown) {
   border-bottom: 2px solid $formColor;
 }
 
-.form-textbox:focus{
+.form-textbox:focus {
   border-bottom: 5px solid $formColor;
   outline-color: $formColor;
 }
 
-.form-textarea{
+.form-textarea {
   transition: all 0.5s ease;
   padding: 0.4rem;
   border-radius: 0.25rem;
@@ -596,12 +600,11 @@ footer {
   outline-color: $formColor;
 }
 
-.form-textarea:not(:placeholder-shown){
+.form-textarea:not(:placeholder-shown) {
   border: 2px solid $formColor;
 }
 
-
-.form-submit{
+.form-submit {
   padding: 0.7rem 2rem;
   background: transparent;
   border: 1px solid rgb(46, 46, 46);
@@ -609,9 +612,57 @@ footer {
   border-radius: 0.25rem;
 }
 
-.form-flex{
+.form-flex {
   display: flex;
   justify-content: flex-end;
 
   margin-top: 2rem;
+}
+
+/* Text */
+.bigger-paragraph {
+  font-size: 1.5rem;
+}
+.font-rns-normal {
+  font-family: RNSNormal;
+}
+
+/* About page title */
+#about-header-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#about-title-spans {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  margin-left: 3rem;
+}
+#about-title-1 {
+  line-height: 6rem;
+  font-size: 6rem;
+  padding: 0;
+  margin: 0;
+}
+#about-title-2 {
+  line-height: 6rem;
+  font-size: 6rem;
+  padding: 0;
+  margin: 0;
+}
+#about-title-3 {
+  line-height: 6rem;
+  font-size: 6rem;
+  padding: 0;
+  margin: 0;
+}
+#about-title-4 {
+  line-height: 6rem;
+  font-size: 6rem;
+  padding: 0;
+  margin: 0;
 }
