@@ -895,28 +895,11 @@ footer {
   margin-left: 3rem;
 }
 
-#about-title-1 {
-  line-height: 6rem;
-  font-size: 6rem;
-  padding: 0;
-  margin: 0;
-}
-
-#about-title-2 {
-  line-height: 6rem;
-  font-size: 6rem;
-  padding: 0;
-  margin: 0;
-}
-
-#about-title-3 {
-  line-height: 6rem;
-  font-size: 6rem;
-  padding: 0;
-  margin: 0;
-}
-
-#about-title-4 {
+#about-title-1,
+#about-title-2,
+#about-title-3,
+#about-title-4,
+#about-title-5 {
   line-height: 6rem;
   font-size: 6rem;
   padding: 0;
