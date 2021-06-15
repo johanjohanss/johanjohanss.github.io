@@ -1146,11 +1146,28 @@ footer {
   #me-img {
     display: none;
   }
+  .hide-big {
+    display: block;
+  }
+  .hide-small {
+    display: none !important;
+  }
+  #about-desc {
+    margin-top: 0.75rem !important;
+    padding-top: 0rem !important;
+  }
 }
 
 @media (max-width: 767px) {
   .hide-big {
     display: block;
+  }
+  .hide-small {
+    display: none !important;
+  }
+  #about-desc {
+    margin-top: 0.75rem !important;
+    padding-top: 0rem !important;
   }
   #headerlogo {
     display: none !important;
@@ -1215,6 +1232,18 @@ footer {
   }
   #social-links {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 900px) and (min-width: 450px) {
+  #about-mobile-title {
+    margin-top: 4rem;
+  }
+}
+
+@media (max-width: 375px) {
+  #wdc-logo {
+    width: 45%;
   }
 }
 /*# sourceMappingURL=newstyle.css.map */
