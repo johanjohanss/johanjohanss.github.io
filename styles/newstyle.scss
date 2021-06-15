@@ -45,6 +45,12 @@ body {
   overflow-x: hidden;
 }
 
+/* Text */
+p,
+a {
+  font-family: RNSSemiBold;
+}
+
 #svgshape {
   position: absolute;
   right: 0;
@@ -68,7 +74,8 @@ body {
 }
 
 .link {
-  color: #257dcf;
+  color: #000000;
+  text-decoration: underline;
 }
 nav {
   position: fixed;
@@ -175,6 +182,9 @@ nav {
   color: $blackColor;
   position: relative;
   z-index: 2;
+}
+.get-in-touch {
+  margin-top: 6rem;
 }
 #main_header {
   position: relative;
@@ -289,9 +299,12 @@ main {
   margin-top: 8rem;
 }
 
-a,
+a {
+  text-decoration: none;
+}
 a:hover {
   text-decoration: none;
+  color: #aca4fe;
 }
 
 /* ABOUT PAGE */
@@ -320,6 +333,16 @@ a:hover {
 .emaillink {
   font-size: 1.1rem;
   color: $formColor;
+}
+.z-up {
+  z-index: 5 !important;
+}
+#paint {
+  position: absolute;
+  left: -8vw;
+  top: 75vh;
+  width: 45vw;
+  z-index: -1 !important;
 }
 
 //Project divs
@@ -566,6 +589,7 @@ footer {
 #contact-form {
   margin-top: 3rem;
   width: 60%;
+  font-family: RNSSemiBold;
 }
 
 .form-group {
@@ -683,18 +707,28 @@ footer {
 
 .panel {
   width: 50vw;
-  height: 100vw;
+  height: 60vw;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .inner-box {
   width: 80%;
+  position: relative;
   //height: 50vh;
-
+  overflow: hidden;
   img {
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.102);
   }
+}
+
+.project-desc {
+  transform: translateY(100%);
+  transition: all 0.75s ease;
+}
+.inner-box:hover .project-desc {
+  transform: translateY(0%);
+  transition: all 0.75s ease;
 }
 #body-top {
   scroll-behavior: smooth;
@@ -703,17 +737,58 @@ footer {
   font-family: RNSBold;
   height: 50vh;
   padding: 5rem;
+  padding-bottom: 0rem;
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-end;
 }
 #projects-h1 {
   padding: 0.5rem;
-  border-bottom: 3px solid #aca4fe;
-  font-size: 250%;
+  //border-bottom: 3px solid #aca4fe;
+  font-size: 350%;
+  max-width: 300px;
 }
 #projects-footer {
-  height: 100vh;
+  z-index: 9999;
+  padding: 5rem;
+  padding-bottom: 2rem;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+#projects-footer-top {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  h2 {
+    font-family: RNSBold;
+    padding: 0.3rem;
+    border-bottom: 4px solid #aca4fe;
+  }
+  a {
+    margin-top: 3rem;
+    font-size: 1.2rem;
+    font-family: RNSSemiBold;
+  }
+  p {
+    margin-top: 3rem;
+    font-size: 1.2rem;
+    font-family: RNSSemiBold;
+  }
+}
+#project-footer-bottom {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: #aca4fe;
+  font-family: RNSSemiBold;
 }
 
 #main-nav {
@@ -721,4 +796,29 @@ footer {
   //padding-left: 5rem;
   //padding-right: 5rem;
   //margin-bottom: 4rem;
+}
+
+.project-desc {
+  position: absolute;
+  bottom: 3%;
+  left: 3%;
+  width: 100%;
+  text-align: center;
+  background: linear-gradient(to right, rgb(254, 255, 174), #f9ffe6);
+  color: #3b3b3b;
+  padding: 2rem;
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  //clip-path: polygon(0 31%, 100% 0, 100% 100%, 0% 100%);
+
+  p {
+    margin: 0;
+    padding: 0;
+    font-family: RNSNormal;
+  }
 }
