@@ -335,7 +335,7 @@ a:hover {
   color: $formColor;
 }
 .z-up {
-  z-index: 5 !important;
+  //z-index: 5 !important;
 }
 #paint {
   position: absolute;
@@ -824,8 +824,46 @@ footer {
   border-radius: 1rem;
 }
 
+.hide-big {
+  display: none;
+}
+
+//media queries
+@media (max-width: 900px) {
+  /* Remove blobs */
+  .blob {
+    display: none;
+  }
+
+  #wdc-logo {
+    width: 30%;
+  }
+
+  #about-title-spans {
+    margin: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0.5rem;
+  }
+  #about-title-spans span {
+    font-size: 3rem !important;
+    line-height: 3rem;
+  }
+  #about-header-div {
+    display: flex;
+    flex-direction: column;
+  }
+  #me-img {
+    display: none;
+  }
+}
+
 //media queries
 @media (max-width: 767px) {
+  .hide-big {
+    display: block;
+  }
+
   #headerlogo {
     display: none !important;
   }
@@ -835,7 +873,40 @@ footer {
 
   #project-section,
   #video-section {
-    padding: 0.5rem !important;
+    padding: 0.65rem !important;
+  }
+
+  #projects-footer {
+    padding: 0.65rem !important;
+    margin-top: 2rem;
+  }
+
+  .projects-main {
+    margin-top: 0.1rem;
+  }
+
+  #projects-header {
+    padding: 0.65rem !important;
+    margin-top: 7rem;
+    height: auto;
+  }
+
+  #projects-footer-top p {
+    margin-top: 1rem;
+  }
+
+  #projects-h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+    max-width: none;
+    width: 100%;
+  }
+  .pin-spacer {
+    display: none !important;
+  }
+
+  #wdc-logo {
+    width: 35%;
   }
 
   main {
@@ -844,25 +915,23 @@ footer {
   .bottom-text {
     margin-top: 1.5rem;
   }
-}
-//media queries
-@media (max-width: 900px) {
-  /* Remove blobs */
-  .blob {
-    display: none;
+  .get-in-touch {
+    margin-top: 1rem;
   }
-
-  #about-title-spans {
-    margin: 0;
+  .bigger-paragraph {
+    font-size: 1.05rem;
   }
-  #about-title-spans span {
-    font-size: 3rem !important;
+  .less-wide {
+    width: 95%;
   }
-  #about-header-div {
-    display: flex;
-    flex-direction: column;
+  #contact-form {
+    width: 95%;
+    padding-bottom: 4rem;
   }
-  #me-img {
+  .emaillink {
+    font-size: 0.95rem;
+  }
+  #social-links {
     display: none;
   }
 }
