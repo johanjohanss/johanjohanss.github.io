@@ -669,3 +669,56 @@ footer {
   padding: 0;
   margin: 0;
 }
+
+/* Horizontal scroll */
+
+.horiz-container {
+  width: 200vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.panel {
+  width: 50vw;
+  height: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inner-box {
+  width: 80%;
+  //height: 50vh;
+
+  img {
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.102);
+  }
+}
+#body-top {
+  scroll-behavior: smooth;
+}
+#projects-header {
+  font-family: RNSBold;
+  height: 50vh;
+  padding: 5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+#projects-h1 {
+  padding: 0.5rem;
+  border-bottom: 3px solid #aca4fe;
+  font-size: 250%;
+}
+#projects-footer {
+  height: 100vh;
+}
+
+#main-nav {
+  padding-top: 1rem;
+  //padding-left: 5rem;
+  //padding-right: 5rem;
+  //margin-bottom: 4rem;
+}

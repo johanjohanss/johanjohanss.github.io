@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="styles/newstyle.css" />
   </head>
 
-  <body>
+  <body id="body-top">
     <!-- NAV -->
     <nav id="main-nav">
       <a href="index.html">
@@ -25,35 +25,17 @@
         <a href="index.html">Home</a>
         <a href="#" class="nav-active">Projects</a>
         <a href="about.html">About</a>
-        <a id="back-top" href="#main_header">
+        <!--<a id="back-top" href="#body-top">
           <img src="svg/arrow-up-square-fill.svg" width="100%" />
-        </a>
+        </a>-->
       </div>
     </nav>
 
-    <!--<header id="main_header">
-      <h1 id="page-title">
-        <span>WEB</span>
-        <span>DESIGN</span>
-        <span>CODER</span>
-      </h1>
-      <p id="page-undertitle">Creating for the web</p>
-      <img src="svg/blob1.svg" id="blob1" />
-      <img src="svg/blob2.svg" id="blob2" />
-      <img src="svg/blob3.svg" id="blob3" />
-      <img src="svg/blob4.svg" id="blob4" />
-      <img src="svg/blob5.svg" id="blob5" />
+    <header id="projects-header">
+      <h1 id="projects-h1">Development and design projects</h1>
     </header>
 
-    <section id="scroll_to_projects">
-      <div class="d-flex flex-column justify-content-center align-items-center">
-        <p class="sequenceRollover">Projects</p>
-        <a href="#project-section"><img src="svg/arrow.svg" width="100%" /></a>
-      </div>
-    </section>-->
-
-    <main>
-      <!-- PROJECTS -->
+    <!--<main>
       <section class="container-fluid p-5" id="project-section">
         <article class="row">
           <div class="col-sm-12 col-md-7 project p-3">
@@ -101,58 +83,44 @@
               </div>
             </a>
           </div>
-
-          <!--<div class="col-sm-12 col-md-6 col-lg-3 project p-3">
-            <a href="projects/waveform.html">
-              <div class="project-content p-3">
-                <h4 class="project-text text-white">Waveform</h4>
-                <p class="project-text text-white">Instruments</p>
-              </div>
-            </a>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-3 project p-3">
-            <a href="projects/three.html">
-              <div class="project-content p-3">
-                <h4 class="project-text text-dark">Three.js</h4>
-                <p class="project-text text-dark">Framework study</p>
-              </div>
-            </a>
-          </div>
-          <div class="col-sm-12 col-md-6 project p-3">
-            <a href="projects/tetris.html">
-              <div class="project-content p-3">
-                <h4 class="project-text text-white">Tetris</h4>
-                <p class="project-text text-white">Game study</p>
-              </div>
-            </a>
-          </div>-->
-          <!--<div class="col-sm-12 col-md-5 project p-3">
-            <a href="projects/barba-tutorial.html">
-              <div class="project-content p-3">
-                <h4 class="project-text text-dark">Barba.js</h4>
-                <p class="project-text text-dark">Easy Explanation</p>
-              </div>
-            </a>
-          </div>-->
-          <!--<div class="col-sm-12 col-md-3 project p-3">
-            <div class="project-content p-3">
-              <h4 class="project-text text-white">Another One</h4>
-              <p class="project-text text-white">Blog Post</p>
-            </div>
-          </div>
-          <div class="col-sm-12 col-md-4 project p-3">
-            <div class="project-content p-3">
-              <h4 class="project-text text-white">Another One</h4>
-              <p class="project-text text-white">Blog Post</p>
-            </div>
-          </div>-->
         </article>
       </section>
+    </main>-->
 
+    <!-- Horizontal scroll -->
+    <div class="horiz-container">
+      <section class="panel">
+        <a href="#" class="inner-box">
+          <img src="img/project-design.jpg" width="100%" />
+        </a>
+      </section>
+      <section class="panel">
+        <a href="#" class="inner-box">
+          <img src="img/project-chat.jpg" width="100%" />
+        </a>
+      </section>
+      <section class="panel">
+        <a href="#" class="inner-box">
+          <img src="img/project-visualiser.jpg" width="100%" />
+        </a>
+      </section>
+      <section class="panel">
+        <a href="#" class="inner-box">
+          <img src="img/project-teris.jpg" width="100%" />
+        </a>
+      </section>
+      <section class="panel">
+        <a href="#" class="inner-box">
+          <img src="img/project-dobble.jpg" width="100%" />
+        </a>
+      </section>
+    </div>
+
+    <div id="projects-footer">
       <article class="d-flex justify-content-center align-items-center">
         <p class="bottom-text">Website Built by Johan Johansson</p>
       </article>
-    </main>
+    </div>
 
     <script src="https://unpkg.com/headroom.js"></script>
 
@@ -162,6 +130,8 @@
       headroom.init();
     </script>
 
-    <script src="scripts/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+    <script src="scripts/script-projects.js"></script>
   </body>
 </html>
