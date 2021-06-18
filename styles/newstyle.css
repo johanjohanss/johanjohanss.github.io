@@ -48,6 +48,10 @@ a {
   font-family: RNSSemiBold;
 }
 
+.title-font {
+  font-family: RNSSemiBold !important;
+}
+
 #svgshape {
   position: absolute;
   right: 0;
