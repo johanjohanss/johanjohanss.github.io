@@ -849,6 +849,36 @@ footer {
   font-size: 0.9rem;
 }
 
+/* 404 page */
+#body-404 {
+  background-image: url("../svg/grid-diagonal-bg.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#blob-404 {
+  position: absolute;
+  z-index: -1;
+}
+.outer-404 {
+  height: 100vh;
+  width: 100%;
+  font-family: RNSSemiBold;
+  position: relative;
+}
+.text-404 {
+  font-size: 10rem;
+}
+.text-404-p {
+}
+.back-btn {
+  background: rgb(41, 41, 41);
+  color: rgb(245, 245, 245);
+  padding: 1rem 1.5rem;
+  border-radius: 0.25rem;
+  display: block;
+  margin-top: 2rem;
+}
+
 //media queries
 
 @media (max-width: 1400px) {
